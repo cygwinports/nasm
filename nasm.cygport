@@ -1,3 +1,6 @@
+NAME="nasm"
+VERSION=2.10.05
+RELEASE=1
 CATEGORY="Devel"
 SUMMARY="The Netwide Assembler"
 DESCRIPTION="NASM is a widespread, portable, very flexible and mature
@@ -5,9 +8,7 @@ assembler tool with support for many output formats licensed under the
 2-clause BSD licence."
 HOMEPAGE="http://www.nasm.us/"
 SRC_URI="http://www.nasm.us/pub/nasm/releasebuilds/${PV}/${P}.tar.xz"
-
-PATCH_URI="01-gnuwin32.patch
-           02-docdir.patch"
+PATCH_URI="01-gnuwin32.patch"
 
 DISTCLEANFILES="doc/Makefile"
 
@@ -23,5 +24,5 @@ src_compile() {
 
 src_install() {
 	cd ${B}
-	cygmake install_everything INSTALLROOT=${D}
+	cygmake install_everything INSTALLROOT=${D} docdir=/usr/share/doc/${PN}
 }
