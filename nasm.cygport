@@ -1,5 +1,5 @@
 NAME="nasm"
-VERSION=2.10.05
+VERSION=2.10.07
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="The Netwide Assembler"
